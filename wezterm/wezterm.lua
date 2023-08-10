@@ -17,9 +17,9 @@ end
 
 function return_bg_image(appearance)
   if appearance:find 'Dark' then
-    return '$HOME/Downloads/cyberpunk.jpeg'
+    return '/Users/inust/Downloads/cyberpunk.jpeg'
   else
-    return '$HOME/Downloads/snowy.jpeg'
+    return '/Users/inust/Downloads/snowy.jpeg'
   end
 end
 
@@ -28,5 +28,14 @@ if wezterm.config_builder then
 end
 return {
 color_scheme = scheme_for_appearance(get_appearance()),
-window_background_image = return_bg_image(get_appearance()),
+-- window_background_image = return_bg_image(get_appearance()),
+-- background = {
+  -- { 
+  --   source = {
+  --     File = return_bg_image(get_appearance()),
+  --   },
+  --   repeat_x  = "Mirror",
+  --     height= "Contain"
+  --   }
+  -- }
 }
